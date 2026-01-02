@@ -15,7 +15,7 @@
 
 ## Path Conventions
 
-- **Single project**: `src/` at repository root (per plan.md)
+- **Single project**: `Phase-I/src/` at repository root (implementation location)
 
 ---
 
@@ -23,12 +23,12 @@
 
 **Purpose**: Create project structure and package files
 
-- [ ] T001 Create directory structure: `src/`, `src/models/`, `src/services/`, `src/cli/`, `src/lib/`
-- [ ] T002 [P] Create package marker `src/__init__.py` with empty content
-- [ ] T003 [P] Create package marker `src/models/__init__.py` with Task import
-- [ ] T004 [P] Create package marker `src/services/__init__.py` with TaskService import
-- [ ] T005 [P] Create package marker `src/cli/__init__.py` with module exports
-- [ ] T006 [P] Create package marker `src/lib/__init__.py` with validator exports
+- [x] T001 Create directory structure: `Phase-I/src/`, `Phase-I/src/models/`, `Phase-I/src/services/`, `Phase-I/src/cli/`, `Phase-I/src/lib/`
+- [x] T002 [P] Create package marker `Phase-I/src/__init__.py` with version info
+- [x] T003 [P] Create package marker `Phase-I/src/models/__init__.py` with Task import
+- [x] T004 [P] Create package marker `Phase-I/src/services/__init__.py` with TaskService import
+- [x] T005 [P] Create package marker `Phase-I/src/cli/__init__.py` with module exports
+- [x] T006 [P] Create package marker `Phase-I/src/lib/__init__.py` with validator exports
 
 ---
 
@@ -38,11 +38,11 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T007 Create Task dataclass in `src/models/task.py` with fields: id, title, description, is_complete
-- [ ] T008 Create input validators in `src/lib/validators.py`: validate_id, validate_title, validate_description
-- [ ] T009 Create TaskService class skeleton in `src/services/task_service.py` with storage dict and ID counter
-- [ ] T010 Create menu display function in `src/cli/menu.py` with 7 options per spec
-- [ ] T011 Create main entry point in `src/main.py` with main loop and menu routing
+- [x] T007 Create Task dataclass in `Phase-I/src/models/task.py` with fields: id, title, description, is_complete
+- [x] T008 Create input validators in `Phase-I/src/lib/validators.py`: validate_id, validate_title, validate_description
+- [x] T009 Create TaskService class skeleton in `Phase-I/src/services/task_service.py` with storage dict and ID counter
+- [x] T010 Create menu display function in `Phase-I/src/cli/menu.py` with 7 options per spec
+- [x] T011 Create main entry point in `Phase-I/src/main.py` with main loop and menu routing
 
 **Checkpoint**: Foundation ready - user story implementation can begin
 
@@ -56,11 +56,11 @@
 
 ### Implementation for User Story 1
 
-- [ ] T012 [US1] Implement `add_task(title, description)` method in `src/services/task_service.py`
-- [ ] T013 [US1] Implement `handle_add_task()` handler in `src/cli/handlers.py` with input prompts
-- [ ] T014 [US1] Wire add task option (menu choice 1) in `src/main.py` to handler
-- [ ] T015 [US1] Add title validation in handler: empty/whitespace check with error message
-- [ ] T016 [US1] Add title/description truncation with warning messages in handler
+- [x] T012 [US1] Implement `add_task(title, description)` method in `Phase-I/src/services/task_service.py`
+- [x] T013 [US1] Implement `handle_add_task()` handler in `Phase-I/src/cli/handlers.py` with input prompts
+- [x] T014 [US1] Wire add task option (menu choice 1) in `Phase-I/src/main.py` to handler
+- [x] T015 [US1] Add title validation in handler: empty/whitespace check with error message
+- [x] T016 [US1] Add title/description truncation with warning messages in handler
 
 **Checkpoint**: User Story 1 complete - can add tasks with validation
 
@@ -74,10 +74,10 @@
 
 ### Implementation for User Story 2
 
-- [ ] T017 [US2] Implement `get_all_tasks()` method in `src/services/task_service.py`
-- [ ] T018 [US2] Implement `handle_view_tasks()` handler in `src/cli/handlers.py` with formatted output
-- [ ] T019 [US2] Wire view tasks option (menu choice 2) in `src/main.py` to handler
-- [ ] T020 [US2] Add "No tasks found." message when task list is empty
+- [x] T017 [US2] Implement `get_all_tasks()` method in `Phase-I/src/services/task_service.py`
+- [x] T018 [US2] Implement `handle_view_tasks()` handler in `Phase-I/src/cli/handlers.py` with formatted output
+- [x] T019 [US2] Wire view tasks option (menu choice 2) in `Phase-I/src/main.py` to handler
+- [x] T020 [US2] Add "No tasks found." message when task list is empty
 
 **Checkpoint**: User Stories 1+2 complete - core MVP (add and view tasks)
 
@@ -91,14 +91,14 @@
 
 ### Implementation for User Story 3
 
-- [ ] T021 [US3] Implement `mark_complete(task_id)` method in `src/services/task_service.py`
-- [ ] T022 [US3] Implement `mark_incomplete(task_id)` method in `src/services/task_service.py`
-- [ ] T023 [US3] Implement `get_task(task_id)` helper method in `src/services/task_service.py`
-- [ ] T024 [US3] Implement `handle_mark_complete()` handler in `src/cli/handlers.py`
-- [ ] T025 [US3] Implement `handle_mark_incomplete()` handler in `src/cli/handlers.py`
-- [ ] T026 [US3] Wire mark complete option (menu choice 3) in `src/main.py` to handler
-- [ ] T027 [US3] Wire mark incomplete option (menu choice 4) in `src/main.py` to handler
-- [ ] T028 [US3] Add ID validation and "Task not found" error handling in handlers
+- [x] T021 [US3] Implement `mark_complete(task_id)` method in `Phase-I/src/services/task_service.py`
+- [x] T022 [US3] Implement `mark_incomplete(task_id)` method in `Phase-I/src/services/task_service.py`
+- [x] T023 [US3] Implement `get_task(task_id)` helper method in `Phase-I/src/services/task_service.py`
+- [x] T024 [US3] Implement `handle_mark_complete()` handler in `Phase-I/src/cli/handlers.py`
+- [x] T025 [US3] Implement `handle_mark_incomplete()` handler in `Phase-I/src/cli/handlers.py`
+- [x] T026 [US3] Wire mark complete option (menu choice 3) in `Phase-I/src/main.py` to handler
+- [x] T027 [US3] Wire mark incomplete option (menu choice 4) in `Phase-I/src/main.py` to handler
+- [x] T028 [US3] Add ID validation and "Task not found" error handling in handlers
 
 **Checkpoint**: User Stories 1-3 complete - add, view, and toggle completion
 
@@ -112,11 +112,11 @@
 
 ### Implementation for User Story 4
 
-- [ ] T029 [US4] Implement `update_task(task_id, title, description)` method in `src/services/task_service.py`
-- [ ] T030 [US4] Implement `handle_update_task()` handler in `src/cli/handlers.py` with current value display
-- [ ] T031 [US4] Wire update task option (menu choice 5) in `src/main.py` to handler
-- [ ] T032 [US4] Add "keep current" behavior when user presses Enter without input
-- [ ] T033 [US4] Add title validation and "Task not found" error handling
+- [x] T029 [US4] Implement `update_task(task_id, title, description)` method in `Phase-I/src/services/task_service.py`
+- [x] T030 [US4] Implement `handle_update_task()` handler in `Phase-I/src/cli/handlers.py` with current value display
+- [x] T031 [US4] Wire update task option (menu choice 5) in `Phase-I/src/main.py` to handler
+- [x] T032 [US4] Add "keep current" behavior when user presses Enter without input
+- [x] T033 [US4] Add title validation and "Task not found" error handling
 
 **Checkpoint**: User Stories 1-4 complete - full CRUD except delete
 
@@ -130,10 +130,10 @@
 
 ### Implementation for User Story 5
 
-- [ ] T034 [US5] Implement `delete_task(task_id)` method in `src/services/task_service.py`
-- [ ] T035 [US5] Implement `handle_delete_task()` handler in `src/cli/handlers.py`
-- [ ] T036 [US5] Wire delete task option (menu choice 6) in `src/main.py` to handler
-- [ ] T037 [US5] Add ID validation and "Task not found" error handling
+- [x] T034 [US5] Implement `delete_task(task_id)` method in `Phase-I/src/services/task_service.py`
+- [x] T035 [US5] Implement `handle_delete_task()` handler in `Phase-I/src/cli/handlers.py`
+- [x] T036 [US5] Wire delete task option (menu choice 6) in `Phase-I/src/main.py` to handler
+- [x] T037 [US5] Add ID validation and "Task not found" error handling
 
 **Checkpoint**: User Stories 1-5 complete - full CRUD operations
 
@@ -143,12 +143,12 @@
 
 **Purpose**: Final integration, edge cases, and exit handling
 
-- [ ] T038 Implement exit handler (menu choice 7) in `src/main.py` with "Goodbye!" message
-- [ ] T039 Add invalid menu choice handling with "Invalid choice" error message
-- [ ] T040 Add edge case: negative ID handling with "ID must be a positive number" message
-- [ ] T041 Add edge case: non-numeric ID handling with "Invalid ID. Please enter a numeric value" message
-- [ ] T042 Run manual validation per quickstart.md scenarios
-- [ ] T043 Verify 80-column terminal formatting for all output
+- [x] T038 Implement exit handler (menu choice 7) in `Phase-I/src/main.py` with "Goodbye!" message
+- [x] T039 Add invalid menu choice handling with "Invalid choice" error message
+- [x] T040 Add edge case: negative ID handling with "ID must be a positive number" message
+- [x] T041 Add edge case: non-numeric ID handling with "Invalid ID. Please enter a numeric value" message
+- [x] T042 Run manual validation per quickstart.md scenarios
+- [x] T043 Verify 80-column terminal formatting for all output
 
 ---
 
