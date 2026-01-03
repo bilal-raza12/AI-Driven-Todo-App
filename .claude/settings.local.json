@@ -2,7 +2,21 @@
   "permissions": {
     "allow": [
       "Bash(git fetch:*)",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "Bash(mkdir:*)",
+      "Bash(uv init:*)",
+      "Bash(echo:*)",
+      "Bash(timeout 10 python:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(find:*)",
+      "Bash(uv pip list:*)",
+      "Bash(uv add:*)",
+      "Bash(.venvScriptspython.exe -m pytest test/ -v)",
+      "Bash(.venv/Scripts/python.exe -m pytest test/ -v)",
+      "Bash(.venv/Scripts/python.exe -m pytest:*)",
+      "Bash(dir /b)"
     ]
   }
 }
